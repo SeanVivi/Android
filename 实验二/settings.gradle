@@ -1,2 +1,0 @@
-include ':app', ':linearlayout', ':constraintlayout', ':table'
-rootProject.name='experience2'
