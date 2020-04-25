@@ -1,0 +1,2 @@
+include ':simpleAdapter', ':alertdialog', ':optionmenu', ':contentmenu'
+rootProject.name='UIexperiment'
