@@ -27,6 +27,18 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
+                        /*获取URL地址并启动隐式Intent的调用
+                        //获取网址
+                        String url = test.getText().toString();
+                        Intent intent = new Intent();
+                        //将url字符串解析为uri对象
+                        Uri uri = Uri.parse(url);
+                        //设置data
+                        intent.setData(uri);
+                        //设置动作
+                        intent.setAction(Intent.ACTION_VIEW);
+                        startActivity(intent);
+                        */
                        //选择浏览器
                        switch (v.getId()){
                            case R.id.bt:
@@ -38,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                        }
                     }
                 })
-
         );
     }
 }
