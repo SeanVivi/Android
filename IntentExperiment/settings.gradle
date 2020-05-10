@@ -1,0 +1,2 @@
+include ':url_intent', ':mybrowser_intent', ':mybrowser_Intent'
+rootProject.name='IntentExperiment'
