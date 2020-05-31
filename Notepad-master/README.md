@@ -14,7 +14,7 @@
         />
  ``` 
 
-### 2、适配器中添加的更改时间戳，以及显示时间戳的TextView
+### 2、适配器中添加更改时间戳，以及显示时间戳的TextView
  ``` java
 		//添加更改时间数据
 		String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
