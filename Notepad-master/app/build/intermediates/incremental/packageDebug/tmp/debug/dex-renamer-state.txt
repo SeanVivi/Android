@@ -1,4 +1,4 @@
-#Sun May 31 17:17:53 CST 2020
+#Sun May 31 18:18:46 CST 2020
 base.0=E\:\\Android\\Notepad-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

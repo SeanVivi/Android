@@ -32,8 +32,7 @@
     <application
         android:debuggable="true"
         android:icon="@drawable/app_notes"
-        android:label="@string/app_name"
-        android:testOnly="true" >
+        android:label="@string/app_name" >
 
         <!-- 添加搜索activity -->
         <activity

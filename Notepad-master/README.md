@@ -97,8 +97,8 @@
 			Cursor cursor = managedQuery(
 					getIntent().getData(),            
 					PROJECTION,                       
-					condition,                        // 模糊搜索条件的前面几个字符
-					conditionArgs,                    // 模糊搜索条件的中间或后面几个字符
+					selection,                        // 模糊搜索条件的前面几个字符
+					selectionArgs,                    // 模糊搜索条件的中间或后面几个字符
 					NotePad.Notes.DEFAULT_SORT_ORDER  
 			);
 			String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE };

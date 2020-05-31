@@ -40,13 +40,13 @@ public class NoteSearch extends ListActivity implements SearchView.OnQueryTextLi
     }
     @Override
     public boolean onQueryTextChange(String title) {
-        String condition = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";
-        String[] conditions = { "%"+title+"%" };
+        String selection = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";
+        String[] selectionArgs = { "%"+title+"%" };
         Cursor cursor = managedQuery(
                 getIntent().getData(),
                 PROJECTION,
-                condition,                        // 模糊搜索条件的前面几个字符
-                conditions,                    // 模糊搜索条件的中间或后面几个字符
+                selection,                        // 模糊搜索条件的前面几个字符
+                selectionArgs,                    // 模糊搜索条件的中间或后面几个字符
                 NotePad.Notes.DEFAULT_SORT_ORDER
         );
         String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,  NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE };
