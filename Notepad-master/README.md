@@ -45,7 +45,7 @@
     };
  ``` 
 
-### 4、在NotePadProvider.java的insert方法和NoteEditor的updateNote方法中将时间戳格式化存入
+### 4、在NotePadProvider.java的insert方法和NoteEditor.java的updateNote方法中将时间戳格式化存入
  ``` java
 		//将时间戳格式化存入
         Long now = Long.valueOf(System.currentTimeMillis());
