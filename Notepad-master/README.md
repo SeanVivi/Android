@@ -135,7 +135,11 @@
 			}
 		}
  ``` 
-
+设置查询文本框监听器
+```
+	//设置查询文本框监听器
+    searchview.setOnQueryTextListener(NoteSearch.this);
+```
 ### 3、在list_options_menu.xml中添加搜索条目
 
  ``` 
@@ -157,7 +161,15 @@
 		  return true;
  ``` 
 
-### 5、结果
+### 5、添加查询实体
+```
+  <!--添加搜索activity-->
+	<activity
+		android:name="NoteSearch"
+		android:label="@string/title_notes_search">
+	</activity>
+```
+### 6、结果
 ![image](https://github.com/SeanVivi/Android/blob/master/images/Search.png)
 ![image](https://github.com/SeanVivi/Android/blob/master/images/Search2.png)
 
