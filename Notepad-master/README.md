@@ -45,7 +45,7 @@
     };
  ``` 
 
-### 4、在NotePadProvider.java中将时间戳格式化存入
+### 4、在NotePadProvider.java和NoteEditor中将时间戳格式化存入，更新
  ``` java
 		//将时间戳格式化存入
         Long now = Long.valueOf(System.currentTimeMillis());
@@ -88,7 +88,7 @@
  ``` 
 
 ### 2、建立NoteSearch类，实现模糊搜索
-搜索文件，通过模糊搜索，通过Cusor游标显示符合条件的笔记
+搜索文件，通过模糊搜索，将条件写进Cursor游标，通过Cusor游标显示符合条件的笔记
  ``` java
 	@Override
 		public boolean onQueryTextChange(String title) {
@@ -159,6 +159,7 @@
 
 ### 5、结果
 ![image](https://github.com/SeanVivi/Android/blob/master/images/Search.png)
+![image](https://github.com/SeanVivi/Android/blob/master/images/Search2.png)
 
 
 

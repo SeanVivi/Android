@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
-        android:queryHint="输入搜索内容..."
+        android:queryHint="搜笔记..."
         android:layout_alignParentTop="true">
     </SearchView>
     <!-- ListView显示模糊搜索时的所有集合-->

@@ -521,7 +521,7 @@ public class NotePadProvider extends ContentProvider implements PipeDataWriter<C
         //将时间戳格式化存入
         Long now = Long.valueOf(System.currentTimeMillis());
         Date date = new Date(now);
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String time = sf.format(date);
 
         // If the values map doesn't contain the creation date, sets the value to the current time.
