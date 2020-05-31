@@ -3,7 +3,7 @@
 
 ### 1、修改notelist_item.xml，添加显示时间戳的TextView
 先将原来的TextView布局改为垂直的线性布局，然后添加显示时间戳的TextView
-'''
+'''Base
 	<TextView
         android:id="@+id/time"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
 '''
 
 ### 2、适配器中添加的更改时间戳，以及显示时间戳的TextView
-'''
+'''java
 		//添加更改时间数据
 		String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
 
@@ -36,7 +36,7 @@
 '''
 
 ### 3、将时间戳投影
-'''
+'''java
   private static final String[] PROJECTION = new String[] {
             NotePad.Notes._ID, // 0
             NotePad.Notes.COLUMN_NAME_TITLE, // 1
@@ -46,7 +46,7 @@
 '''
 
 ### 4、在NotePadProvider.java中将时间戳格式化存入
-'''
+'''java
 		//将时间戳格式化存入
         Long now = Long.valueOf(System.currentTimeMillis());
         Date date = new Date(now);
@@ -61,7 +61,7 @@
 此功能的界面跳转模仿笔记编辑的界面跳转至笔记搜索页面，而搜索结果的显示则是模仿的笔记显示功能
 
 ### 1、布局搜索界面，在该界面设计搜索视图，还有搜索结果集合视图 
-'''
+'''Base
 	<?xml version="1.0" encoding="utf-8"?>
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		android:orientation="vertical"
@@ -89,7 +89,7 @@
 
 ### 2、建立NoteSearch类，实现模糊搜索
 搜索文件，通过模糊搜索，通过Cusor游标显示符合条件的笔记
-'''
+'''java
 	@Override
 		public boolean onQueryTextChange(String title) {
 			String condition = NotePad.Notes.COLUMN_NAME_TITLE + " Like ? ";
@@ -115,7 +115,7 @@
 		}
 	'''
 点击搜索出来的笔记的事件响应，模仿NoteList类，当点击笔记时，可跳转到当前笔记的编辑页面
-'''
+'''java
 	Override
 		protected void onListItemClick(ListView l, View v, int position, long id) {
 			// Constructs a new URI from the incoming URI and the row ID
@@ -147,7 +147,7 @@
 
 ### 4、在NoteList类中的onOptionsItemSelected方法添加笔记搜索
 
-'''
+'''java
 	//增加笔记搜索
 	case R.id.menu_search:
 		  Intent intent =new Intent();
