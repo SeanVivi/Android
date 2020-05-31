@@ -14,7 +14,7 @@
         />
  ``` 
 
-### 2、适配器中添加的更改时间戳，以及显示时间戳的TextView
+### 2、适配器中添加更改时间戳，以及显示时间戳的TextView
  ``` java
 		//添加更改时间数据
 		String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE ,NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
@@ -45,12 +45,12 @@
     };
  ``` 
 
-### 4、在NotePadProvider.java和NoteEditor中将时间戳格式化存入，更新
+### 4、在NotePadProvider.java的insert方法和NoteEditor的updateNote方法中将时间戳格式化存入
  ``` java
 		//将时间戳格式化存入
         Long now = Long.valueOf(System.currentTimeMillis());
         Date date = new Date(now);
-        SimpleDateFormat sf = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+        SimpleDateFormat sf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String time = sf.format(date);
  ``` 
 ### 5、结果
