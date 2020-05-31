@@ -113,7 +113,8 @@
 			setListAdapter(adapter);
 			return true;
 		}
-	 ``` 
+		
+ ``` 
 点击搜索出来的笔记的事件响应，模仿NoteList类，当点击笔记时，可跳转到当前笔记的编辑页面
  ``` java
 	Override
